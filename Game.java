@@ -34,7 +34,7 @@ public class Game {
                     p1.setPosition(newPosition);
                 }
 
-                System.out.println(p1.getName() + "\'s new position is " + newPosition);
+                System.out.println(p1.getName() + "\'s new position is " + p1.getPosition());
                 if (skip) {
                     System.out.println("X:" + p1.getName() + " landed on skip tile, next 3 chances will be skipped");
                     p1.setSkip();
@@ -53,7 +53,7 @@ public class Game {
                     p2.setPosition(newPosition);
                 }
 
-                System.out.println(p2.getName() + "\'s new position is " + newPosition);
+                System.out.println(p2.getName() + "\'s new position is " + p2.getPosition());
                 if (skip) {
                     System.out.println("X:" + p2.getName() + " landed on skip tile, next 3 chances will be skipped");
                     p2.setSkip();
