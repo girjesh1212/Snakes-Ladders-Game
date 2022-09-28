@@ -65,7 +65,7 @@ public class Game {
                 }
 
                 if (p2.getSkip() > 0) {
-                    System.out.println("Skipping " + p1.getName() + "\'s chance");
+                    System.out.println("Skipping " + p2.getName() + "\'s chance");
                     p2.decreaseSkip();
                 }
             }
