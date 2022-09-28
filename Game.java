@@ -29,7 +29,11 @@ public class Game {
                 newPosition = board.checkLadder(newPosition);
                 newPosition = board.checkSnake(newPosition);
                 boolean skip = board.checkSkip(newPosition);
-                p1.setPosition(newPosition);
+
+                if (newPosition <= 100) {
+                    p1.setPosition(newPosition);
+                }
+
                 System.out.println(p1.getName() + "\'s new position is " + newPosition);
                 if (skip) {
                     System.out.println("X:" + p1.getName() + " landed on skip tile, next 3 chances will be skipped");
