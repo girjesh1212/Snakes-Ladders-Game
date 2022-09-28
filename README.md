@@ -14,6 +14,8 @@ The skip tile numbers are: { 18, 34, 56, 70, 82 }
 - Open terminal and navigate to the root directory
 - Execute the command **javac Main.java && java Main Alex Bob**
 - If you want to change the name of the players, then change the command to **javac Main.java && java Main Name1 Name2**
+- Each time the above command is executed, there would fresh simulation of a game.
+
 
 ## Output 
 This is just a simulation, so there will be log of the entire game in the console.

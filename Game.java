@@ -24,22 +24,22 @@ public class Game {
             int dice = board.throwDice();
             // Player p1 chance
             if (nextMoveBy == 0 && p1.getSkip() == 0) {
-                System.out.println("Player 1 threw " + dice + " on dice");
+                System.out.println(p1.getName() + " threw " + dice + " on dice");
                 int newPosition = p1.getPosition() + dice;
                 newPosition = board.checkLadder(newPosition);
                 newPosition = board.checkSnake(newPosition);
                 boolean skip = board.checkSkip(newPosition);
                 p1.setPosition(newPosition);
-                System.out.println("Player 1 new position is " + newPosition);
+                System.out.println(p1.getName() + "\'s new position is " + newPosition);
                 if (skip) {
-                    System.out.println("X: Player 1 landed on skip tile, next 3 chances will be skipped");
+                    System.out.println("X:" + p1.getName() + " landed on skip tile, next 3 chances will be skipped");
                     p1.setSkip();
                 }
             }
 
             // Player p2 chance
             else if (nextMoveBy == 1 && p2.getSkip() == 0) {
-                System.out.println("Player 2 threw " + dice + " on dice");
+                System.out.println(p2.getName() + " threw " + dice + " on dice");
                 int newPosition = p2.getPosition() + dice;
                 newPosition = board.checkLadder(newPosition);
                 newPosition = board.checkSnake(newPosition);
@@ -49,19 +49,19 @@ public class Game {
                     p2.setPosition(newPosition);
                 }
 
-                System.out.println("Player 2 new position is " + newPosition);
+                System.out.println(p2.getName() + "\'s new position is " + newPosition);
                 if (skip) {
-                    System.out.println("X: Player 2 landed on skip tile, next 3 chances will be skipped");
+                    System.out.println("X:" + p2.getName() + " landed on skip tile, next 3 chances will be skipped");
                     p2.setSkip();
                 }
             } else {
                 if (p1.getSkip() > 0) {
-                    System.out.println("Skipping player 1 chance");
+                    System.out.println("Skipping " + p1.getName() + "\'s chance");
                     p1.decreaseSkip();
                 }
 
                 if (p2.getSkip() > 0) {
-                    System.out.println("Skipping player 2 chance");
+                    System.out.println("Skipping " + p1.getName() + "\'s chance");
                     p2.decreaseSkip();
                 }
             }

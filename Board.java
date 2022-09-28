@@ -35,7 +35,7 @@ public class Board {
     public int checkSnake(int position) {
         for (int i = 0; i < snake_from.length; i++) {
             if (snake_from[i] == position) {
-                System.out.println(" ~~ Eaten by snake from " + snake_from[i] + " to " + snake_to[i]);
+                System.out.println(" ~ Eaten by snake from " + snake_from[i] + " to " + snake_to[i]);
                 return snake_to[i];
             }
         }
